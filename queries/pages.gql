@@ -1,0 +1,12 @@
+{
+  pages {
+    edges {
+      node {
+        id
+        slug
+        title
+        status
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  proyectos {
+    nodes {
+      id
+      title
+      infoProyecto {
+        url
+        lugar
+        descripcion
+      }
+      featuredImage {
+        node {
+          sourceUrl
+        }
+      }
+    }
+  }
+}
