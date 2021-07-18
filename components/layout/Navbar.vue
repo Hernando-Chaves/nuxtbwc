@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-full text-gray-700 bg-blue-500 dark-mode:text-gray-200 dark-mode:bg-gray-800 py-3 "
+    class="w-full text-gray-700 bg-blue-900 dark-mode:text-gray-200 dark-mode:bg-gray-800 py-3 "
   >
     <div
       class="flex flex-col max-w-screen-xl px-6 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8"
@@ -40,9 +40,11 @@
                 ? (open = true)
                 : (open = false)
             "
-            class="flex flex-row items-center w-full px-3 py-2 mt-2 text-white text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+            class="flex flex-row items-center w-full px-3 py-2 mt-2 text-white hover:text-primary-500 transition duration-500 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 focus:outline-none focus:shadow-outline"
           >
-            <span>{{ item["node"].label }} </span>
+            <nuxt-link :to="item['node'].path"
+              >{{ item["node"].label }}
+            </nuxt-link>
             <svg
               fill="currentColor"
               viewBox="0 0 20 20"
@@ -68,7 +70,7 @@
             class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48"
           >
             <div
-              class="px-2 py-1 bg-white rounded-md shadow dark-mode:bg-gray-800"
+              class="px-2 py-1 bg-white rounded-md shadow dark-mode:bg-secondary-500 "
               v-for="subItem in item.node.childItems.nodes"
               :key="subItem.id"
             >

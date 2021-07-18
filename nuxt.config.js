@@ -1,3 +1,5 @@
+import {resolve} from 'path'
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -12,13 +14,17 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }
     ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
   ],
+  alias: {
+  ' pages' : resolve(__dirname,'./queries/pages')
+
+  },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
@@ -32,6 +38,9 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
   ],
+  tailwindcss: {
+    cssPath: '~/assets/tailwind.css'
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
@@ -45,6 +54,18 @@ export default {
       },
     },
   },
+  // generate: {
+  //   routes() {
+  //     const rutas = [];
+
+  //     for(const urlKey of Object.keys(pages.edges))
+  //     {
+  //       const nvaRuta = '/pages/' + pages[urlKey];
+  //       rutas.push(nvaRuta)
+  //     }
+  //     return rutas;
+  //   }
+  // },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

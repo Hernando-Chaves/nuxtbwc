@@ -1,5 +1,5 @@
 {
-  pages {
+  pages(where: { status: PUBLISH }) {
     edges {
       node {
         id

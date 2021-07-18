@@ -1,0 +1,22 @@
+{
+  pages {
+    edges {
+      node {
+        isFrontPage
+        title
+        HomeFields {
+          heroHome {
+            subtituloHero
+            tituloHero
+            parrafoHero
+            textoBotonHero
+            destinoBotonHero
+            imagenDeFondoHero {
+              sourceUrl(size: MEDIUM)
+            }
+          }
+        }
+      }
+    }
+  }
+}

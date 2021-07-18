@@ -1,0 +1,52 @@
+{
+  pages(where: { name: "inicio" }) {
+    nodes {
+      HomeFields {
+        configuracionSeccionHero {
+          subtituloHero
+          tituloHero
+          parrafoHero
+          textoBotonHero
+          destinoBotonHero
+          imagenDeFondo {
+            sourceUrl
+          }
+        }
+        tituloSeccionServicios
+        agregaLosServicios {
+          nombreDelServicio
+          textoDelBoton
+          destinoBotonServicio
+          imagenDelServicio {
+            sourceUrl
+          }
+        }
+        configuracionSeccionNosotros {
+          tituloSeccionNosotros
+          textoDelParrafoNosotros
+          textoDelBotonNosotros
+          destinoBotonNosotros
+        }
+        configuracionSeccionCta {
+          tituloDeLaSeccionCta
+          parrafoSeccionCta
+          textoDelBotonCta
+          destinoBotonCta
+        }
+        configuracionSeccionPresupuesto {
+          tituloDeLaSeccionPresupuesto
+          parrafoSeccionPresupuesto
+          textoBotonPresupuesto
+          destinoBotonPresupuesto
+        }
+        tituloSeccion3Reglas
+        parrafoDeLaSeccion3Reglas
+        repetidor3Reglas {
+          tituloRegla
+          descripcionDeLaReglaLinea1
+          descripcionDeLaReglaLinea2
+        }
+      }
+    }
+  }
+}

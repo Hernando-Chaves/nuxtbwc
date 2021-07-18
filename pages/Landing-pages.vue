@@ -1,6 +1,6 @@
 <template>
   <div class="container mt-5">
-    <h1 class="text-center">Inicio</h1>
+    <h1 class="text-center">Landing pages</h1>
   </div>
 </template>
 

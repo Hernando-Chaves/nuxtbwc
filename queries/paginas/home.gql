@@ -1,0 +1,20 @@
+{
+  pages(where: { title: "inicio" }) {
+    nodes {
+      id
+      HomeFields {
+        heroHome {
+          subtituloHero
+          tituloHero
+          parrafoHero
+          textoBotonHero
+          textoBotonHero
+          imagenDeFondoHero {
+            sourceUrl
+          }
+          destinoBotonHero
+        }
+      }
+    }
+  }
+}
